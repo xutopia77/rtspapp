@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		//=============================================================
+		{
+			"label": "build",
+			"command": "cd client && make -j",
+			// "args": ["default"],
+			"type": "shell"
+		},
+		//=============================================================
+		{
+			"type": "shell",
+			"label": "build hello world", // 任务的名字
+			// "command": "/usr/bin/gcc",
+			"command": "gcc", // 编译命令
+			"args": [
+				"-g",
+				"main.c",
+				"-o",
+				"main"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

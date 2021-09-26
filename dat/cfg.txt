@@ -1,0 +1,24 @@
+//配置文件详解，允许允许有空行，但是不允许有空格
+//只支持//这种注释
+
+//设置视频来源
+//1:本地yuv文件播放，2:rtsp接收到的文件进行播放,3:播放本地h264文件
+sourceType=2
+
+//yuv文件的处理方式，是否开启响应的sink，1开启，0不开启
+sinkFileEnable=1
+sinkSdlEnable=1
+
+//是否开启接收的h264文件保存
+h264FileEnable=1
+
+//本地文件播放时，文件源，文件命名格式: yuv格式_宽x长.yuv
+inYuvFileName=../dat/yuv420p_640x360.yuv
+
+rtspUrl=rtsp://127.0.0.1:8554/../dat/s640x360.264
+
+//保存的yuv文件名称，会自动在后面加上  宽x长.yuv
+outYuvFileName=../dat/out/rxyuv
+
+//保存的h264的名称
+outH264FileName=../dat/out/rxh264.h264
